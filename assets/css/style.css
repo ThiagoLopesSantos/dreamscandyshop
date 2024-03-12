@@ -1,0 +1,433 @@
+/*PADRONIZAÇÃO*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+    /*font-family: "Caveat Brush", cursive;*/
+}
+:root {
+    --azul-escuro: #001F3F;
+    --azul-medio: #7ecee9;
+    --azul-claro: #ADD8E6;
+    --rosa-escuro: #FF1493;
+    --roxo: #4B0082;
+    --prata: #C0C0C0;
+    --branco: #FFFFFF;
+}
+/*FIM PADRONIZAÇÃO*/
+
+
+body {
+    background-color: var(--azul-escuro);
+}
+
+/*TOPO*/
+header, footer {
+    background-color: var(--rosa-escuro);
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+    color: var(--azul-medio);
+}
+
+#logo, #logo-footer{
+    color: var(--branco);
+    border: 2px double var(--azul-medio);
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px var(--azul-escuro);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#logo{
+    margin-left: 10px;
+}
+
+.menu > li {
+    position: relative;
+    float: left;
+    list-style: none;
+    padding: 25px;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+}
+.menu > li:hover{
+    border-color: var(--roxo);
+    color: var(--branco);
+}
+.menu li,
+.menu li a {
+    list-style: none;
+    color: var(--azul-claro);
+    font-weight: bold;
+    font-size: 25px;
+}
+.menu li a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.menu li p {
+    cursor: pointer;
+}
+
+.menu li a:hover,
+.menu li p:hover {
+    color: var(--branco);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #4B0082;
+    width: 150px;
+    left: 0;
+    top: 100%;
+}
+
+.submenu li {
+    text-align: center;
+}
+.submenu li a {
+    width: 100%;
+    margin-right:0 ;
+}
+
+.submenu li:hover{
+    border: 1px solid var(--azul-claro);
+}
+.menu li .seta {
+    color: var(--rosa-escuro);
+}
+.menu li:hover .seta {
+    color: var(--roxo);
+}
+
+.submenu li:hover .seta:last-of-type {
+    color: var(--rosa-escuro);
+}
+
+#submenu-bebidas {
+    display: none;
+    background-color: #FF1493;
+    border: 8px solid var(--roxo);
+}
+/*FIM TOPO*/
+
+/*SECTION SOBRE*/
+#sobre,
+#kitFesta {
+    margin-top: 30px;
+}
+
+#sobre .flex {
+    align-items: flex-start;
+}
+
+#sobre .container img {
+    width: 50%;
+}
+
+.mainDescription {
+    flex-direction: column;
+    padding: 0 16px;
+}
+
+h2 {
+    width: 100%;
+    font-size: 2em;
+    border-bottom: 1px solid var(--azul-medio);
+}
+
+.descricao {
+    color: var(--azul-claro);
+    padding-top: 7px;
+    font-size: 1.3em;
+}
+/*FIM SECTION SOBRE*/
+
+/*SECTION PRODUTOS*/
+.produtos {
+    padding: 16px 0px;
+}
+
+.produtos h2 {
+    margin-bottom: 26px;
+    font-size: 2.2em;
+}
+
+.itens {
+    display: grid;
+    grid-template-columns: repeat(4, 24.2%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+.produto-item img{
+    width: 100%;
+}
+.produto-item h3 {
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--azul-claro);
+}
+.produto-item p {
+    margin-top: 10px;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: var(--prata);
+}
+
+button {
+    margin-top: 3px;
+    width: 100%;
+    padding: 3px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--azul-medio);
+    color: var(--roxo);
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.produto-item button {
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--azul-claro);
+    color: var(--roxo);
+}
+
+.container .bebidasG {
+    border-bottom: 1px solid var(--azul-claro);
+    padding-bottom: 20px;
+}
+/*FIM SECTION PRODUTOS*/
+
+/*SECTION KIT FESTA*/
+#kitFesta {
+    margin-bottom: 30px;
+}
+
+#kitFesta img {
+    width: 70%;
+}
+
+#kitFesta p {
+    font-size: 1.5em;
+}
+
+#kitFesta button {
+    width: 50%;
+}
+/*FIM SECTION KIT FESTA*/
+
+/*SECTION CONTATO*/
+#contato {
+    margin-bottom: 30px;
+}
+
+#contato > .flex,
+#form-kit {
+    flex-direction: column;
+}
+
+#form-kit {
+    padding-top: 15px;
+    gap: 20px;
+    border-left: 1px solid var(--azul-claro);
+    border-right: 1px solid var(--azul-claro);
+    border-bottom: 1px solid var(--azul-claro);
+}
+
+#form-kit label {
+    font-size: 1.5em;
+}
+
+#form-kit input{
+    width: 80%;
+    padding: 8px;
+    font-size: 2em;
+}
+
+#form-kit textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+#form-kit  .form-campo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+#form-kit  .form-campo:last-of-type{
+    flex-direction: column;
+    align-items: start;
+}
+.error {
+    font-size: 1px;
+    color: var(--prata);
+}
+.ms-error {
+    color: var(--rosa-escuro);
+}
+/*FIM SECTION CONTATO*/
+
+
+/*FOOTER*/
+#logo-footer{
+    font-size: 2em;
+}
+footer p {
+    font-size: 1.3em;
+}
+/*FIM FOOTER*/
+
+/****************RESPONSIVIDADE*******************/
+
+/*CELULAR*/
+@media screen and (max-width: 640px) {
+
+    /*TOPO*/
+    header .container,
+    footer .container {
+        flex-direction: column;
+    }
+
+    #logo{
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    /*FIM TOPO*/
+
+    /*SECTION SOBRE*/
+    #sobre .flex,
+    #kitFesta .flex {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #sobre .container img {
+        margin-bottom: 15px;
+        width: 98%;
+    }
+    /*FIM SECTION SOBRE*/
+
+    /*SECTION PRODUTOS*/
+    .produtos {
+        padding: 10px;
+    }
+    .conteudo {
+        height: 100%;
+    }
+    .itens {
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 0;
+        row-gap: 0;
+    }
+    .produto-item img{
+        height: 50%;
+    }
+    .container .bebidasG {
+        padding-bottom: 0px;
+    }
+    /*FIM SECTION PRODUTOS*/
+
+    /*KIT FESTA*/
+    #kitFesta img {
+        width: 90%;
+    }
+    #kitFesta h2 {
+        margin-top: 5px;
+    }
+    #kitFesta p {
+        font-size: 1.3em;
+        padding: 5px 0;
+    }
+    #kitFesta button {
+        width: 90%;
+    }
+    /*FIM KIT FESTA*/
+
+    /*SECTION CONTATO*/
+    #form-kit {
+        gap: 15px;
+        border: none;
+    }
+
+    #form-kit  .form-campo{
+        width: 80%;
+    }
+
+    #form-kit button {
+        width: 50%;
+    }
+    /*FIM SECTION CONTATO*/
+}
+
+
+/*TABLET*/
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    /*SECTION SOBRE*/
+    #sobre .flex,
+    #kitFesta .flex {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #sobre .container img {
+        margin-bottom: 15px;
+        width: 80%;
+    }
+    /*FIM SECTION SOBRE*/
+
+    /*SECTION PRODUTOS*/
+    .produtos {
+        margin-top: 20px;
+    }
+    .conteudo {
+        height: 100%;
+    }
+    .itens {
+        grid-template-columns: repeat(2, 49%);
+        padding-left: 10px;
+        row-gap: 3%;
+    }
+    .produto-item img{
+        height: 52%;
+    }
+    
+    .container .bebidasG {
+        padding-bottom: 40px;
+    }
+    /*FIM SECTION PRODUTOS*/
+
+    /*SECTION CONTATO*/
+
+    #form-kit {
+        gap: 15px;
+        border: none;
+    }
+
+    #form-kit  .form-campo{
+        width: 80%;
+    }
+
+    #form-kit button {
+        width: 50%;
+    }
+
+}
